@@ -22,31 +22,7 @@ const portfolioItems = [
     image: "/projects/wearenations.png",
     category: "Web Design",
     link: "https://wearenations.com",
-    className: "col-span-1 row-span-1", // Wide item
-  },
-  {
-    id: 3,
-    title: "Plant Shop Website",
-    image: "/projects/Sushiroll.png",
-    category: "Web Design",
-    link: "https://sushi-mern-stack.netlify.app/",
-    className: "col-span-1 row-span-1 md:col-span-1 md:row-span-2 object-fit",
-  },
-  {
-    id: 4,
-    title: "Bakery Website",
-    image: "/projects/localandlive.png",
-    category: "Web Design",
-    link: "https://localandlive365.com/",
-    className: "col-span-1 row-span-1 md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 5,
-    title: "Restaurant Menu",
-    image: "/projects/regem.png",
-    category: "Web Design",
-    link: "https://regem.in",
-    className: "col-span-1 row-span-1 md:col-span-1 md:row-span-1",
+    className: "col-span-1 row-span-1 md:col-span-1 md:row-span-1.5 object-fit", // Wide item
   },
   {
     id: 6,
@@ -54,15 +30,24 @@ const portfolioItems = [
     image: "/projects/brightboard.png",
     category: "Web Design",
     link: "https://brightboard-livid.vercel.app/",
-    className: "col-span-1 row-span-1 md:col-span-2 md:row-span-1 object-cover", // Wide item
+    className: "col-span-1 row-span-1 md:col-span-1 md:row-span-2 object-cover", // Wide item
   },
+  {
+    id: 3,
+    title: "Plant Shop Website",
+    image: "/projects/Sushiroll.png",
+    category: "Web Design",
+    link: "https://sushi-mern-stack.netlify.app/",
+    className: "col-span-1 row-span-1 object-fit",
+  },
+
 ]
 
 export default function Portfolio() {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null)
 
   return (
-    <section className="py-20 bg-white">
+    <section id="portfolio" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Recent Works</h2>
@@ -77,7 +62,7 @@ export default function Portfolio() {
           {portfolioItems.map((item) => (
             <div
               key={item.id}
-              className={cn("relative overflow-hidden rounded-lg group", item.className)}
+              className={cn("relative overflow-hidden rounded-2xl group", item.className)}
               onMouseEnter={() => setHoveredItem(item.id)}
               onMouseLeave={() => setHoveredItem(null)}
             >
@@ -107,7 +92,7 @@ export default function Portfolio() {
         <div className="flex justify-center mt-12">
           <Button
             variant="outline"
-            className="border-orange-500 text-gray-800 rounded-full p-6 bg-transparent hover:bg-black hover:border-none hover:scale-115 hover:text-white transition-colors"
+            className="border-blue-500 text-gray-800 rounded-full p-6 bg-transparent hover:bg-black hover:border-none hover:scale-115 hover:text-white transition-colors"
             asChild
           >
             <Link href="/portfolio">

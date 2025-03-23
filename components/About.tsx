@@ -4,7 +4,7 @@ import { Phone } from "lucide-react"
 
 export default function About() {
   return (
-    <section className="py-20 bg-white">
+    <section id="about-us" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2">
@@ -34,7 +34,7 @@ export default function About() {
 
             <Button
               variant="outline"
-              className="border-orange-500 text-gray-800 rounded-full p-5 bg-transparent hover:bg-black hover:border-none hover:scale-115 hover:text-white transition-colors"
+              className="border-blue-500 text-gray-800 rounded-full p-5 bg-transparent hover:bg-black hover:border-none hover:scale-115 hover:text-white transition-colors"
             >
               <Phone className="mr-2 h-4 w-4" /> Contact Us
             </Button>

@@ -18,7 +18,7 @@ export default function Services() {
   ]
 
   return (
-    <section className="p-10 bg-gray-900 text-white">
+    <section id="services" className="p-10 bg-gray-900 text-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2">

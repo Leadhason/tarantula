@@ -35,9 +35,9 @@ export default function Hero() {
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            <span className="text-orange-500">Creative</span> Craftsmanship
+            <span className="text-blue-600">Creative</span> Craftsmanship
             <br />
-            For The <span className="text-orange-500">Web</span>
+            For The <span className="text-blue-600">Web</span>
           </h1>
 
           <p className="text-gray-600 max-w-2xl mx-auto mb-8">

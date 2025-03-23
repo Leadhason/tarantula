@@ -120,4 +120,11 @@
   body {
     @apply bg-background text-foreground;
   }
+  html {
+   @apply scroll-smooth;
+  }
+}
+
+.gradient {
+  @apply bg-gradient-to-br from-[#00C4CC] via-[#7B3FE4] to-[#1A73E8];
 }

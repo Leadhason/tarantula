@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
             <Link href="/" className="inline-block mb-6">
-              <h1 className="font-bold text-xl">Tarantula</h1>
+              <Image src="/logo4.png" alt="Tarantula Logo" width={100} height={100} className="object-cover" />
             </Link>
 
             <address className="not-italic text-gray-600 mb-4">
@@ -27,16 +27,16 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-gray-800 mb-6">Explore Site</h3>
 
             <nav className="space-y-3">
-              <Link href="/about" className="block text-gray-600 hover:text-orange-500 transition-colors">
+              <Link href="/about" className="block text-gray-600 hover:text-blue-500 transition-colors">
                 About Us
               </Link>
-              <Link href="/why" className="block text-gray-600 hover:text-orange-500 transition-colors">
+              <Link href="/why" className="block text-gray-600 hover:text-blue-500 transition-colors">
                 Why Choose Us
               </Link>
-              <Link href="/services" className="block text-gray-600 hover:text-orange-500 transition-colors">
+              <Link href="/services" className="block text-gray-600 hover:text-blue-500 transition-colors">
                 Our Services
               </Link>
-              <Link href="/portfolio" className="block text-gray-600 hover:text-orange-500 transition-colors">
+              <Link href="/portfolio" className="block text-gray-600 hover:text-blue-500 transition-colors">
                 Portfolio
               </Link>
             </nav>
@@ -48,7 +48,7 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center text-gray-600">
                 <span className="mr-2">📧</span>
-                <a href="mailto:admin@kitpro.site" className="hover:text-orange-500 transition-colors">
+                <a href="mailto:admin@kitpro.site" className="hover:text-blue-500 transition-colors">
                   admin@tarantula.site
                 </a>
               </div>
@@ -60,7 +60,7 @@ export default function Footer() {
 
               <div className="flex items-center text-gray-600">
                 <span className="mr-2">📞</span>
-                <a href="tel:+6281232248658" className="hover:text-orange-500 transition-colors">
+                <a href="tel:+233 54 654 6765" className="hover:text-blue-500 transition-colors">
                   +233 54 123 4567
                 </a>
               </div>
@@ -73,7 +73,7 @@ export default function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-200 hover:bg-orange-500 text-gray-700 hover:text-white p-2 rounded-full transition-colors"
+                className="bg-gray-200 hover:bg-blue-500 text-gray-700 hover:text-white p-2 rounded-full transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
@@ -82,7 +82,7 @@ export default function Footer() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-200 hover:bg-orange-500 text-gray-700 hover:text-white p-2 rounded-full transition-colors"
+                className="bg-gray-200 hover:bg-blue-500 text-gray-700 hover:text-white p-2 rounded-full transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter className="h-5 w-5" />
@@ -91,7 +91,7 @@ export default function Footer() {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-200 hover:bg-orange-500 text-gray-700 hover:text-white p-2 rounded-full transition-colors"
+                className="bg-gray-200 hover:bg-blue-500 text-gray-700 hover:text-white p-2 rounded-full transition-colors"
                 aria-label="YouTube"
               >
                 <Youtube className="h-5 w-5" />
