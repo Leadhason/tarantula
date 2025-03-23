@@ -90,7 +90,7 @@ export default function Portfolio() {
 
               <div
                 className={cn(
-                  "absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-6 flex flex-col justify-end transition-transform duration-300 w-full",
+                  "absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-6 items-center flex flex-col justify-center transition-transform duration-300 w-full",
                   hoveredItem === item.id ? "translate-y-0" : "translate-y-[70%]",
                 )}
               >
