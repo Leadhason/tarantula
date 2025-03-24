@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
@@ -8,13 +8,59 @@ import { Menu, X } from "lucide-react"
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState("")
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
   }
 
+  // Smooth scroll function
+  const scrollToSection = (sectionId: string) => {
+    setMobileMenuOpen(false) // Close mobile menu if open
+
+    const element = document.getElementById(sectionId)
+    if (element) {
+      const headerOffset = 80 // Adjust based on your header height
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      })
+
+      // Update active section
+      setActiveSection(sectionId)
+    }
+  }
+
+  // Update active section based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["hero", "about-us", "why", "services", "portfolio"]
+
+      for (const sectionId of sections) {
+        const section = document.getElementById(sectionId)
+        if (section) {
+          const rect = section.getBoundingClientRect()
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            setActiveSection(sectionId)
+            break
+          }
+        }
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    handleScroll() // Initial check
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   return (
-    <header className="w-full py-3 background-blur-md bg-gray-100 sm:py-4 sticky  top-0 z-50">
+    <header className="w-full py-3 sm:py-4 bg-gray-100 sticky top-0 z-50">
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image
@@ -28,28 +74,40 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6 lg:space-x-10">
-          <Link href="about-us" className="text-gray-800 font-medium hover:text-blue-500 transition-colors">
+          <button
+            onClick={() => scrollToSection("about-us")}
+            className={`text-gray-800 font-medium hover:text-orange-500 transition-colors ${activeSection === "about-us" ? "text-orange-500" : ""}`}
+          >
             About Us
-          </Link>
-          <Link href="why" className="text-gray-800 font-medium hover:text-blue-500 transition-colors">
+          </button>
+          <button
+            onClick={() => scrollToSection("why")}
+            className={`text-gray-800 font-medium hover:text-orange-500 transition-colors ${activeSection === "why" ? "text-orange-500" : ""}`}
+          >
             Why
-          </Link>
-          <Link href="services" className="text-gray-800 font-medium hover:text-blue-500 transition-colors">
+          </button>
+          <button
+            onClick={() => scrollToSection("services")}
+            className={`text-gray-800 font-medium hover:text-orange-500 transition-colors ${activeSection === "services" ? "text-orange-500" : ""}`}
+          >
             Services
-          </Link>
-          <Link href="portfolio" className="text-gray-800 font-medium hover:text-blue-500 transition-colors">
+          </button>
+          <button
+            onClick={() => scrollToSection("portfolio")}
+            className={`text-gray-800 font-medium hover:text-orange-500 transition-colors ${activeSection === "portfolio" ? "text-orange-500" : ""}`}
+          >
             Portfolio
-          </Link>
+          </button>
         </nav>
 
         {/* Desktop Contact Button */}
         <div className="hidden sm:block">
           <Button
             variant="outline"
-            className="border-blue-400 text-gray-800 bg-transparent rounded-full font-medium hover:bg-black hover:text-white hover:border-transparent hover:scale-105 transition-all"
-            asChild
+            className="border-blue-500 text-gray-800 px-4 py-2 bg-transparent rounded-full font-medium hover:bg-black hover:text-white hover:border-transparent hover:scale-105 transition-all"
+            onClick={() => scrollToSection("contact")}
           >
-            <Link href="/contact">Contact Us</Link>
+            Contact Us
           </Button>
         </div>
 
@@ -65,47 +123,40 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-gray-100 border-t border-gray-200 absolute left-0 right-0 z-40 shadow-lg">
+        <div className="md:hidden bg-white border-t border-gray-200 absolute left-0 right-0 z-40 shadow-lg">
           <div className="container mx-auto px-4 py-3">
             <nav className="flex flex-col space-y-4 py-2">
-              <div className="flex flex-col items-center justify-center w-full">
-                <Link
-                  href="about-us"
-                  className="text-gray-800 font-medium hover:text-blue-500 transition-colors py-2 border-b border-gray-100"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  About Us
-                </Link>
-                <Link
-                  href="why"
-                  className="text-gray-800 font-medium hover:text-blue-500 transition-colors py-2 border-b border-gray-100"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Why
-                </Link>
-                <Link
-                  href="services"
-                  className="text-gray-800 font-medium hover:text-blue-500 transition-colors py-2 border-b border-gray-100"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Services
-                </Link>
-                <Link
-                  href="portfolio"
-                  className="text-gray-800 font-medium hover:text-blue-500 transition-colors py-2 border-b border-gray-100"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Portfolio
-                </Link>
-              </div>
+              <button
+                onClick={() => scrollToSection("about-us")}
+                className={`text-left text-gray-800 font-medium hover:text-orange-500 transition-colors py-2 border-b border-gray-100 ${activeSection === "about-us" ? "text-orange-500" : ""}`}
+              >
+                About Us
+              </button>
+              <button
+                onClick={() => scrollToSection("why")}
+                className={`text-left text-gray-800 font-medium hover:text-orange-500 transition-colors py-2 border-b border-gray-100 ${activeSection === "why" ? "text-orange-500" : ""}`}
+              >
+                Why
+              </button>
+              <button
+                onClick={() => scrollToSection("services")}
+                className={`text-left text-gray-800 font-medium hover:text-orange-500 transition-colors py-2 border-b border-gray-100 ${activeSection === "services" ? "text-orange-500" : ""}`}
+              >
+                Services
+              </button>
+              <button
+                onClick={() => scrollToSection("portfolio")}
+                className={`text-left text-gray-800 font-medium hover:text-orange-500 transition-colors py-2 border-b border-gray-100 ${activeSection === "portfolio" ? "text-orange-500" : ""}`}
+              >
+                Portfolio
+              </button>
               <div className="pt-2 sm:hidden">
                 <Button
                   variant="outline"
                   className="w-full border-blue-400 text-gray-800 bg-transparent rounded-full font-medium hover:bg-black hover:text-white hover:border-transparent hover:scale-105 transition-all"
-                  asChild
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => scrollToSection("contact")}
                 >
-                  <Link href="/contact">Contact Us</Link>
+                  Contact Us
                 </Button>
               </div>
             </nav>
