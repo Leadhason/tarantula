@@ -14,7 +14,7 @@ export default function Header() {
   }
 
   return (
-    <header className="w-full py-3 sm:py-4 bg-gray-100 sticky top-0 z-50">
+    <header className="w-full py-3 background-blur-md bg-gray-100 sm:py-4 sticky  top-0 z-50">
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image
@@ -28,16 +28,16 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6 lg:space-x-10">
-          <Link href="about-us" className="text-gray-800 font-medium hover:text-orange-500 transition-colors">
+          <Link href="about-us" className="text-gray-800 font-medium hover:text-blue-500 transition-colors">
             About Us
           </Link>
-          <Link href="why" className="text-gray-800 font-medium hover:text-orange-500 transition-colors">
+          <Link href="why" className="text-gray-800 font-medium hover:text-blue-500 transition-colors">
             Why
           </Link>
-          <Link href="services" className="text-gray-800 font-medium hover:text-orange-500 transition-colors">
+          <Link href="services" className="text-gray-800 font-medium hover:text-blue-500 transition-colors">
             Services
           </Link>
-          <Link href="portfolio" className="text-gray-800 font-medium hover:text-orange-500 transition-colors">
+          <Link href="portfolio" className="text-gray-800 font-medium hover:text-blue-500 transition-colors">
             Portfolio
           </Link>
         </nav>
@@ -78,21 +78,21 @@ export default function Header() {
                 </Link>
                 <Link
                   href="why"
-                  className="text-gray-800 font-medium hover:text-orange-500 transition-colors py-2 border-b border-gray-100"
+                  className="text-gray-800 font-medium hover:text-blue-500 transition-colors py-2 border-b border-gray-100"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Why
                 </Link>
                 <Link
                   href="services"
-                  className="text-gray-800 font-medium hover:text-orange-500 transition-colors py-2 border-b border-gray-100"
+                  className="text-gray-800 font-medium hover:text-blue-500 transition-colors py-2 border-b border-gray-100"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Services
                 </Link>
                 <Link
                   href="portfolio"
-                  className="text-gray-800 font-medium hover:text-orange-500 transition-colors py-2 border-b border-gray-100"
+                  className="text-gray-800 font-medium hover:text-blue-500 transition-colors py-2 border-b border-gray-100"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Portfolio

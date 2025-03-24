@@ -51,11 +51,11 @@ export default function Footer() {
           </div>
 
           {/* Contact and Social */}
-          <div className="text-center sm:text-left">
+          <div className="text-center">
             <h3 className="text-lg font-semibold text-gray-800 mb-4 sm:mb-6">Contact Us</h3>
 
             <div className="space-y-2 sm:space-y-3 mb-6">
-              <div className="flex items-center text-gray-600 justify-center sm:justify-start">
+              <div className="flex items-center text-gray-600 justify-center">
                 <span className="mr-2">📧</span>
                 <a
                   href="mailto:admin@kitpro.site"
@@ -65,12 +65,12 @@ export default function Footer() {
                 </a>
               </div>
 
-              <div className="flex items-center text-gray-600 justify-center sm:justify-start">
+              <div className="flex items-center text-gray-600 justify-center">
                 <span className="mr-2">📍</span>
                 <span className="text-sm sm:text-base">Kumasi, Ghana</span>
               </div>
 
-              <div className="flex items-center text-gray-600 justify-center sm:justify-start">
+              <div className="flex items-center text-gray-600 justify-center">
                 <span className="mr-2">📞</span>
                 <a href="tel:+233 54 654 6765" className="hover:text-blue-500 transition-colors text-sm sm:text-base">
                   +233 54 123 4567
@@ -78,9 +78,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <h3 className="text-lg font-semibold text-gray-800 mt-6 sm:mt-8 mb-3 sm:mb-4">Follow Us</h3>
-
-            <div className="flex space-x-4 justify-center sm:justify-start">
+            <div className="flex space-x-4 justify-center">
               <a
                 href="https://facebook.com"
                 target="_blank"

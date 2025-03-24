@@ -38,7 +38,7 @@ export default function Services() {
                   key={index}
                   className="flex flex-col sm:flex-row gap-3 sm:gap-4 bg-gray-800 bg-opacity-50 rounded-2xl sm:rounded-full p-4 sm:pr-8"
                 >
-                  <div className="bg-gray-700 rounded-full p-3 flex-shrink-0 text-orange-500 self-center sm:self-auto">
+                  <div className="bg-gray-700 rounded-full p-3 flex flex-shrink-0 items-center self-center sm:self-auto">
                     {service.icon}
                   </div>
                   <div className="text-center sm:text-left">
