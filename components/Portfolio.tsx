@@ -70,7 +70,7 @@ export default function Portfolio() {
                 src={item.image || "/placeholder.svg"}
                 alt={item.title}
                 fill
-                className="transition-transform duration-500 group-hover:scale-105"
+                className="transition-transform object-cover duration-500 group-hover:scale-105"
               />
 
               <div
