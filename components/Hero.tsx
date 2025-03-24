@@ -41,7 +41,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-            We provide the best solutions for PowerPoint slides, Web design and other graphic needs.
+          We provide top-notch Web Design, Development, and UI/UX solutions, ensuring innovative, user-centric, and high-quality digital experiences.
           </p>
         </div>
 
