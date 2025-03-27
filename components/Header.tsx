@@ -104,7 +104,7 @@ export default function Header() {
         <div className="hidden sm:block">
           <Button
             variant="outline"
-            className="border-blue-500 text-gray-800 px-4 corsor-pointer py-2 bg-transparent rounded-full font-medium hover:bg-black hover:text-white hover:border-transparent hover:scale-105 transition-all"
+            className="border-blue-500 text-gray-800 px-4 cursor-pointer py-2 bg-transparent rounded-full font-medium hover:bg-black hover:text-white hover:border-transparent hover:scale-105 transition-all"
             onClick={() => scrollToSection("contact")}
           >
             Contact Us
