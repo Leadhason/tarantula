@@ -76,25 +76,25 @@ export default function Header() {
         <nav className="hidden md:flex items-center space-x-6 lg:space-x-10">
           <button
             onClick={() => scrollToSection("about-us")}
-            className={`text-gray-800 font-medium hover:text-orange-500 transition-colors ${activeSection === "about-us" ? "text-orange-500" : ""}`}
+            className={`text-gray-800 font-medium cursor-pointer hover:text-orange-500 transition-colors ${activeSection === "about-us" ? "text-orange-500" : ""}`}
           >
             About Us
           </button>
           <button
             onClick={() => scrollToSection("why")}
-            className={`text-gray-800 font-medium hover:text-orange-500 transition-colors ${activeSection === "why" ? "text-orange-500" : ""}`}
+            className={`text-gray-800 font-medium cursor-pointer hover:text-orange-500 transition-colors ${activeSection === "why" ? "text-orange-500" : ""}`}
           >
             Why
           </button>
           <button
             onClick={() => scrollToSection("services")}
-            className={`text-gray-800 font-medium hover:text-orange-500 transition-colors ${activeSection === "services" ? "text-orange-500" : ""}`}
+            className={`text-gray-800 font-medium cursor-pointer hover:text-orange-500 transition-colors ${activeSection === "services" ? "text-orange-500" : ""}`}
           >
             Services
           </button>
           <button
             onClick={() => scrollToSection("portfolio")}
-            className={`text-gray-800 font-medium hover:text-orange-500 transition-colors ${activeSection === "portfolio" ? "text-orange-500" : ""}`}
+            className={`text-gray-800 font-medium cursor-pointer hover:text-orange-500 transition-colors ${activeSection === "portfolio" ? "text-orange-500" : ""}`}
           >
             Portfolio
           </button>
@@ -104,7 +104,7 @@ export default function Header() {
         <div className="hidden sm:block">
           <Button
             variant="outline"
-            className="border-blue-500 text-gray-800 px-4 py-2 bg-transparent rounded-full font-medium hover:bg-black hover:text-white hover:border-transparent hover:scale-105 transition-all"
+            className="border-blue-500 text-gray-800 px-4 corsor-pointer py-2 bg-transparent rounded-full font-medium hover:bg-black hover:text-white hover:border-transparent hover:scale-105 transition-all"
             onClick={() => scrollToSection("contact")}
           >
             Contact Us
