@@ -76,25 +76,25 @@ export default function Header() {
         <nav className="hidden md:flex items-center space-x-6 lg:space-x-10">
           <button
             onClick={() => scrollToSection("about-us")}
-            className={`text-gray-800 font-medium cursor-pointer hover:text-orange-500 transition-colors ${activeSection === "about-us" ? "text-orange-500" : ""}`}
+            className={`text-gray-800 font-medium cursor-pointer hover:text-blue-500 transition-colors ${activeSection === "about-us" ? "text-blue-500" : ""}`}
           >
             About Us
           </button>
           <button
             onClick={() => scrollToSection("why")}
-            className={`text-gray-800 font-medium cursor-pointer hover:text-orange-500 transition-colors ${activeSection === "why" ? "text-orange-500" : ""}`}
+            className={`text-gray-800 font-medium cursor-pointer hover:text-blue-500 transition-colors ${activeSection === "why" ? "text-blue-500" : ""}`}
           >
             Why
           </button>
           <button
             onClick={() => scrollToSection("services")}
-            className={`text-gray-800 font-medium cursor-pointer hover:text-orange-500 transition-colors ${activeSection === "services" ? "text-orange-500" : ""}`}
+            className={`text-gray-800 font-medium cursor-pointer hover:text-blue-500 transition-colors ${activeSection === "services" ? "text-blue-500" : ""}`}
           >
             Services
           </button>
           <button
             onClick={() => scrollToSection("portfolio")}
-            className={`text-gray-800 font-medium cursor-pointer hover:text-orange-500 transition-colors ${activeSection === "portfolio" ? "text-orange-500" : ""}`}
+            className={`text-gray-800 font-medium cursor-pointer hover:text-blue-500 transition-colors ${activeSection === "portfolio" ? "text-blue-500" : ""}`}
           >
             Portfolio
           </button>
